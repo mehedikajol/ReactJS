@@ -19,9 +19,9 @@ export default function SuperHeroesPage() {
 
   return (
     <>
-      <h2>Super</h2>
+      <h2>Traditional Super Hero Page</h2>
       {data.map((hero) => {
-        return <div key={hero.id}>{hero.name}</div>;
+        return <p key={hero.id}>{hero.name}</p>;
       })}
     </>
   );
