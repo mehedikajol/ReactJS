@@ -1,0 +1,19 @@
+nav {
+  text-align: center;
+  background-color: cyan;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+  float: left;
+}
