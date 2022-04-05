@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./Styles/SuperHeroesPage.css";
+import Preloader from "./utils/Preloader";
 
 export default function SuperHeroesPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +22,7 @@ export default function SuperHeroesPage() {
   }, []);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Preloader />;
   }
 
   if (error) {
