@@ -12,8 +12,18 @@
     },
     {
       "id": 3,
-      "name": "Wonder Woman",
-      "alterEgo": "Princess Diana"
+      "name": "Spiderman",
+      "alterEgo": "Peter Parker"
+    },
+    {
+      "id": 4,
+      "name": "Antman",
+      "alterEgo": "Scott Lang"
+    },
+    {
+      "id": 5,
+      "name": "Ironman",
+      "alterEgo": "Tony Stark"
     }
   ]
 }
