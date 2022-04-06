@@ -1,5 +1,7 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import { usePostData } from "../hooks/usePostData";
+import "./../styles/Post.css";
 
 export default function Post() {
   const postId = 1;
@@ -12,13 +14,15 @@ export default function Post() {
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <h2>{data?.data.title}</h2>
-          <p>{data?.data.body}</p>
-        </div>
-      </div>
-    </div>
+    <Row>
+      <Col className="mt-4 post">
+        <div
+          className="image"
+          style={{ backgroundImage: `url("https://picsum.photos/1200")` }}
+        />
+        <h2>{data?.data.title}</h2>
+        <p>{data?.data.body}</p>
+      </Col>
+    </Row>
   );
 }

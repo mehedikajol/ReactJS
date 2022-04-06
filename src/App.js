@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Post from "./components/Post";
 import Posts from "./components/Posts";
 
 const queryClient = new QueryClient();
@@ -11,10 +12,11 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
+      <div style={{}}>
         <Header />
         <Container>
           <Posts />
+          <Post />
         </Container>
         <Footer />
       </div>
