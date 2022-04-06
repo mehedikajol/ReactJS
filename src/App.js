@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { QueryClient, QueryClientProvider } from "react-query";
+import Comments from "./components/Comments";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Post from "./components/Post";
+import Posts from "./components/Posts";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="container mt-2">
+        <Header />
+        <Posts />
+        <Post />
+        <Comments />
+        <Footer />
+      </div>
+    </QueryClientProvider>
   );
 }
 
