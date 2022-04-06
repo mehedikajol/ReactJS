@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Card, Col, Row } from "react-bootstrap";
 import { usePostsData } from "../hooks/usePostsData";
 import "../styles/Posts.css";
 import Preloader from "../utils/Preloder";
@@ -11,19 +12,25 @@ export default function Posts() {
   }
 
   return (
-    <div className="row posts">
+    <Row>
       <h2>Posts Details</h2>
-
       {data.data.map((post) => {
         return (
-          <div key={post.id} className="col-lg-3 col-md-4 col-sm-6">
-            <div className="card postItem">
-              <h4>{post.title}</h4>
-              <p>{post.body}</p>
-            </div>
-          </div>
+          <Col className="mt-2 mb-2" lg={3} md={4} sm={6}>
+            <Card>
+              <div className="posts" key={post.id}>
+                <Card.Body>
+                  <Card.Img src="https://via.placeholder.com/600x350" />
+
+                  <Card.Title className="postsTitle">{post.title}</Card.Title>
+                  <Card.Text className="postsBody">{post.body}</Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+              </div>
+            </Card>
+          </Col>
         );
       })}
-    </div>
+    </Row>
   );
 }

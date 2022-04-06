@@ -1,16 +1,21 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+//import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Users from "./components/Users";
+import Posts from "./components/Posts";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="container mt-2">
+      <div style={{ fontFamily: "'Source Sans Pro', sans-serif" }}>
         <Header />
-        <Users />
+        <Container>
+          <Posts />
+        </Container>
         <Footer />
       </div>
     </QueryClientProvider>

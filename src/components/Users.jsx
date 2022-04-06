@@ -1,22 +1,30 @@
+import { Card, Col, Row } from "react-bootstrap";
 import { useUsersData } from "../hooks/useUsersData";
+import "../styles/Users.css";
 
 export default function Users() {
   const { data } = useUsersData();
   console.log(data?.data);
   return (
-    <div className="container">
-      <div className="row">
-        {data?.data.map((user) => {
-          return (
-            <div className="col-lg-4 col-sm-6 mb-4" key={user.id}>
-              <h2>{user.name}</h2>
-              <h2>{user.username}</h2>
-              <h3>{user.email}</h3>
-              <h3>{user.phone}</h3>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <Row>
+      {data?.data.map((user) => {
+        return (
+          <Col className="mt-2 mb-2" lg={3} md={4} sm={6}>
+            <Card>
+              <div className="userItem" key={user.id}>
+                <Card.Body>
+                  <Card.Title>{user.name}</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    {user.username}
+                  </Card.Subtitle>
+                  <Card.Text>{user.phone}</Card.Text>
+                  <Card.Text className="text-primary">{user.email}</Card.Text>
+                </Card.Body>
+              </div>
+            </Card>
+          </Col>
+        );
+      })}
+    </Row>
   );
 }

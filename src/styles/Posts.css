@@ -1,19 +1,16 @@
 .posts {
   text-align: justify;
-}
-.postItem {
-  background: #eeeeee;
+  background: #f4f4f4;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
-  min-height: 150px;
-  padding: 15px;
+  border-radius: 5px;
 }
-.postItem h4 {
+.posts .postsTitle {
   white-space: nowrap;
+  font-size: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.postItem p {
+.posts .postsBody {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
