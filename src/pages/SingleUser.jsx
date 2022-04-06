@@ -1,7 +1,7 @@
 import React from "react";
 import { useUserData } from "../hooks/useUserData";
 
-export default function User() {
+export default function SingleUser() {
   const userId = 1;
   const { data, isError, error } = useUserData(userId);
   console.log(data);
