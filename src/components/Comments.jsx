@@ -8,7 +8,11 @@ export default function Comments() {
   return (
     <div>
       {data?.data.map((comment) => {
-        return <Comment key={comment.id} comment={comment} />;
+        return (
+          <div key={comment.id}>
+            <Comment comment={comment} />
+          </div>
+        );
       })}
     </div>
   );

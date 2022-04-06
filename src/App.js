@@ -1,9 +1,7 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import Comments from "./components/Comments";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Post from "./components/Post";
-import Posts from "./components/Posts";
+import User from "./pages/User";
 
 const queryClient = new QueryClient();
 
@@ -12,9 +10,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="container mt-2">
         <Header />
-        <Posts />
-        <Post />
-        <Comments />
+        <User />
         <Footer />
       </div>
     </QueryClientProvider>
