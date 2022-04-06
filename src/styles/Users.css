@@ -1,7 +1,21 @@
-.userItem {
+.users {
   background: #eeeeee;
   text-align: center;
   height: 150px;
   border-radius: 5px;
   box-shadow: 2px 2px 4px #666666;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.users:hover {
+  box-shadow: 4px 4px 10px #666666;
+}
+.users .name {
+  font-size: 24px;
+}
+.users .username {
+  font-size: 16px;
+  margin-top: 15px;
 }

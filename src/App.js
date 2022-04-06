@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Users from "./components/Users";
 import Home from "./pages/Home";
 import SinglePost from "./pages/SinglePost";
 import SingleUser from "./pages/SingleUser";
@@ -16,11 +17,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Header />
-        <Container>
+        <Container className="my-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/post" element={<SinglePost />} />
-            <Route path="/user" element={<SingleUser />} />
+            <Route path="/users/:userId" element={<SingleUser />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/posts/:postId" element={<SinglePost />} />
           </Routes>
         </Container>
         <Footer />

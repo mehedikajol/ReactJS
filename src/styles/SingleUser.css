@@ -1,0 +1,29 @@
+.singleUser {
+}
+.singleUser h1 {
+  margin-bottom: 15px;
+}
+.singleUser .name {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.singleUser .username {
+  font-size: 20px;
+}
+
+.singleUser .emailPhone {
+  font-size: 18px;
+  text-transform: lowercase;
+}
+.singleUser .company {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.singleUser .address {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.singleUser span {
+  text-transform: capitalize;
+}

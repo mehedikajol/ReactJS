@@ -4,8 +4,7 @@ import { usePostCommnets } from "../hooks/usePostComments";
 import "../styles/Comments.css";
 import Comment from "./Comment";
 
-export default function Comments() {
-  const postId = 1;
+export default function Comments({ postId }) {
   const { data } = usePostCommnets(postId);
   return (
     <Row>

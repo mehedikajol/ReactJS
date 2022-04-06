@@ -1,4 +1,5 @@
 import { Card, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useUsersData } from "../hooks/useUsersData";
 import "../styles/Users.css";
 
@@ -9,17 +10,17 @@ export default function Users() {
     <Row>
       {data?.data.map((user) => {
         return (
-          <Col className="mt-2 mb-2" lg={3} md={4} sm={6}>
+          <Col className="mt-2 mb-2" lg={4} sm={6}>
             <Card>
-              <div className="userItem" key={user.id}>
-                <Card.Body>
-                  <Card.Title>{user.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    {user.username}
-                  </Card.Subtitle>
-                  <Card.Text>{user.phone}</Card.Text>
-                  <Card.Text className="text-primary">{user.email}</Card.Text>
-                </Card.Body>
+              <div className="users" key={user.id}>
+                <Link className="anyLink" to={`/users/${user.id}`}>
+                  <Card.Body>
+                    <Card.Title className="name">{user.name}</Card.Title>
+                    <Card.Subtitle className="username">
+                      @{user.username}
+                    </Card.Subtitle>
+                  </Card.Body>
+                </Link>
               </div>
             </Card>
           </Col>

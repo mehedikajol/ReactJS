@@ -8,7 +8,7 @@ export default function Header() {
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container className="header">
         <Navbar.Brand>
-          <Link className="menuLink" to="/">
+          <Link className="anyLink" to="/">
             USER PLACEHOLDER
           </Link>
         </Navbar.Brand>
@@ -16,18 +16,13 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link>
-              <Link className="menuLink" to="/">
+              <Link className="anyLink" to="/">
                 Home
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className="menuLink" to="/post">
-                Post
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link className="menuLink" to="user">
-                User
+              <Link className="anyLink" to="/users">
+                Users
               </Link>
             </Nav.Link>
           </Nav>
