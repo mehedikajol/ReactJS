@@ -1,21 +1,24 @@
 import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { usePostsData } from "../hooks/usePostsData";
-import "../styles/Posts.css";
+import { useUserPosts } from "../hooks/useUserPosts";
 import Preloader from "../utils/Preloder";
 import Post from "./Post";
 
-export default function Posts() {
-  const { data, isLoading } = usePostsData();
+export default function UserPosts({ userId }) {
+  const { isLoading, data, isError, error } = useUserPosts(userId);
 
   if (isLoading) {
     return <Preloader />;
   }
 
+  if (isError) {
+    return <h2>{error.message}</h2>;
+  }
+
   return (
-    <Row>
-      <h2>All Posts</h2>
+    <>
+      <h2 className="mt-4">Posts by this user:</h2>
       {data.data.map((post) => {
         return (
           <Col key={post.id} className="mt-2 mb-2" lg={4} md={6} sm={6}>
@@ -29,6 +32,6 @@ export default function Posts() {
           </Col>
         );
       })}
-    </Row>
+    </>
   );
 }

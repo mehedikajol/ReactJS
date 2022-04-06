@@ -9,7 +9,7 @@ export default function Comments({ postId }) {
   return (
     <Row>
       <Col className="mt-2 comments">
-        <h2>What people says about this photo: </h2>
+        <h2>What people say about this photo: </h2>
         {data?.data.map((comment) => {
           return (
             <div key={comment.id}>

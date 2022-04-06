@@ -2,6 +2,14 @@
 }
 .singleUser h1 {
   margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.singleUser .userImage {
+}
+.singleUser .userImage img {
+  border-radius: 50%;
+}
+.singleUser .userDetailName {
 }
 .singleUser .name {
   font-size: 28px;

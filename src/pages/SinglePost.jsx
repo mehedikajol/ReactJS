@@ -1,10 +1,10 @@
 import React from "react";
-import Post from "../components/Post";
+import ShowPost from "../components/ShowPost";
 
 export default function SinglePost() {
   return (
     <div>
-      <Post />
+      <ShowPost />
     </div>
   );
 }

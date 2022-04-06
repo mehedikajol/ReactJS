@@ -1,6 +1,5 @@
 .comment {
   display: flex;
-
   margin-top: 15px;
 }
 .comment .commentPicture {
@@ -17,6 +16,7 @@
   width: 100%;
 }
 .comment .commentDetails h4 {
+  font-weight: 600;
   font-size: 18px;
   text-transform: capitalize;
 }
@@ -27,6 +27,7 @@
 .comment .commentDetails p {
   font-size: 14px;
   text-align: justify;
+  line-height: 1.6;
 }
 .comment span {
   text-transform: capitalize;

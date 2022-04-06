@@ -1,16 +1,25 @@
-.post .image {
-  width: 100%;
-  height: 350px;
-  background-size: cover;
-  margin-bottom: 15px;
+.post {
+  padding: 15px 15px 20px 15px;
+}
+.post .imageBack {
+  height: 150px;
   border-radius: 5px;
+  background-position: center top;
+  background-size: cover;
 }
-.post h2 {
-  font-size: 28px;
+.post .postTitle {
+  white-space: nowrap;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-transform: uppercase;
-  text-align: justify;
 }
-.post p {
-  font-size: 18px;
-  text-align: justify;
+.post .postBody {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }

@@ -1,33 +1,30 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Button, Card } from "react-bootstrap";
 import { usePostData } from "../hooks/usePostData";
+import Preloader from "../utils/Preloder";
 import "./../styles/Post.css";
-import Comments from "./Comments";
 
-export default function Post() {
-  const { postId } = useParams();
-  const { data, isError, error } = usePostData(postId);
-  console.log(data);
-  console.log(error);
+export default function Post({ postId }) {
+  const { isLoading, data, isError, error } = usePostData(postId);
 
   if (isError) {
     return <h2>{error}</h2>;
   }
+  if (isLoading) {
+    return <Preloader />;
+  }
 
   return (
-    <>
-      <Row>
-        <Col className="mt-4 post">
-          <div
-            className="image"
-            style={{ backgroundImage: `url("https://picsum.photos/1200/500")` }}
-          />
-          <h2>{data?.data.title}</h2>
-          <p>{data?.data.body}</p>
-        </Col>
-      </Row>
-      <Comments postId={postId} />
-    </>
+    <Card.Body className="post">
+      <div
+        className="imageBack mb-2"
+        style={{
+          backgroundImage: `url("https://picsum.photos/600/350")`,
+        }}
+      />
+      <Card.Title className="postTitle">{data?.data.title}</Card.Title>
+      <Card.Text className="postBody">{data?.data.body}</Card.Text>
+      <Button variant="primary">Read More</Button>
+    </Card.Body>
   );
 }
