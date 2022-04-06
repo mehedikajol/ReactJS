@@ -8,7 +8,9 @@
 .post h2 {
   font-size: 28px;
   text-transform: uppercase;
+  text-align: justify;
 }
 .post p {
   font-size: 18px;
+  text-align: justify;
 }

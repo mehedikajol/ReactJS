@@ -18,7 +18,7 @@ export default function Post() {
       <Col className="mt-4 post">
         <div
           className="image"
-          style={{ backgroundImage: `url("https://picsum.photos/1200")` }}
+          style={{ backgroundImage: `url("https://picsum.photos/1200/500")` }}
         />
         <h2>{data?.data.title}</h2>
         <p>{data?.data.body}</p>

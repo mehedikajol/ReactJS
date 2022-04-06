@@ -1,0 +1,33 @@
+.comment {
+  display: flex;
+
+  margin-top: 15px;
+}
+.comment .commentPicture {
+  margin: 10px 25px 10px 15px;
+  display: flex;
+  align-items: center;
+}
+.comment img {
+  width: 75px;
+  border-radius: 100%;
+}
+.comment .commentDetails {
+  border-bottom: 1px dotted rgb(13, 110, 53);
+  width: 100%;
+}
+.comment .commentDetails h4 {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.comment .commentDetails h5 {
+  font-size: 16px;
+  text-transform: lowercase;
+}
+.comment .commentDetails p {
+  font-size: 14px;
+  text-align: justify;
+}
+.comment span {
+  text-transform: capitalize;
+}
