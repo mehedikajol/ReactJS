@@ -20,9 +20,16 @@ export default function UserAlbums({ userId }) {
       <div className="userAlbums ">
         {data.data.map((album) => {
           return (
-            <Col key={album.id} className="mt-2 mb-2 p-2" lg={3} md={4} sm={6}>
+            <Col
+              key={album.id}
+              className="mt-2 mb-2 p-2"
+              lg={3}
+              md={4}
+              sm={6}
+              xs={12}
+            >
               <Link className="anyLink" to={`/albums/${album.id}`}>
-                <Card className="albumsCard">
+                <Card className="albumsCard w-100">
                   <Card.Title className="albumsTitle d-block">
                     {album.title}
                   </Card.Title>

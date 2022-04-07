@@ -1,0 +1,50 @@
+.userDetails {
+}
+.userDetails h1 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.userDetails .userImage {
+}
+.userDetails .userImage img {
+  border-radius: 50%;
+}
+.userDetails .userDetailName {
+}
+.userDetails .name {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.userDetails .username {
+  font-size: 20px;
+}
+
+.userDetails .emailPhone {
+  font-size: 18px;
+  text-transform: lowercase;
+}
+.userDetails .company {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.userDetails .address {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.userDetails span {
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 575px) {
+  .userDetails .userImage {
+    text-align: center;
+  }
+  .userDetails .userImage img {
+    max-width: 60%;
+    margin-bottom: 20px;
+  }
+  .userDetails .userDetailName {
+    text-align: center;
+  }
+}
