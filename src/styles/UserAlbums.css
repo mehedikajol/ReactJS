@@ -1,0 +1,26 @@
+.userAlbums {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.userAlbums .albumsCard {
+  height: 150px;
+
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: #fafafa;
+  box-shadow: 2px 2px 4px #999999;
+  transition: 0.5s;
+}
+.userAlbums .albumsCard:hover {
+  box-shadow: 4px 4px 8px #999999;
+}
+
+.userAlbums .albumsTitle {
+  text-transform: uppercase;
+  font-weight: 600;
+}

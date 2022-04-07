@@ -1,25 +1,38 @@
 import React from "react";
-import { Card } from "react-bootstrap";
-import { useAlbum } from "../hooks/useAlbum";
+import { Col, Row } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { useUserAlbum } from "../hooks/useUserAlbum";
 import Preloader from "../utils/Preloder";
+import "./../styles/UserAlbum.css";
 
-export default function UserAlbum({ albumId }) {
-  const { data, isLoading } = useAlbum(albumId);
+export default function UserAlbum() {
+  const { albumId } = useParams();
+  const { data, isLoading } = useUserAlbum(albumId);
 
   if (isLoading) {
     return <Preloader />;
   }
 
-  //console.log(data?.data);
+  console.log(data);
   return (
-    <Card.Body>
-      {data?.data.map((album) => {
-        return (
-          <Card.Title key={album.id} className="todoTitle">
-            {album.title}
-          </Card.Title>
-        );
-      })}
-    </Card.Body>
+    <div className="userAlbum">
+      <h2>Single Album</h2>
+      <Row>
+        {data?.data.map((photo) => {
+          return (
+            <Col className="my-2" lg={2} md={3} sm={4} xs={6} key={photo.id}>
+              <div
+                className="userAlbumBg"
+                style={{
+                  backgroundImage: `url(${photo.url})`,
+                }}
+              >
+                <h2 className="usersAlbumTitle">{photo.title}</h2>
+              </div>
+            </Col>
+          );
+        })}
+      </Row>
+    </div>
   );
 }

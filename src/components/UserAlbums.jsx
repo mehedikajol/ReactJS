@@ -1,7 +1,9 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useUserAlbums } from "../hooks/useUserAlbums";
 import Preloader from "../utils/Preloder";
+import "./../styles/UserAlbums.css";
 
 export default function UserAlbums({ userId }) {
   const { data, isLoading, isError, error } = useUserAlbums(userId);
@@ -15,16 +17,21 @@ export default function UserAlbums({ userId }) {
   return (
     <>
       <h2>All Albums</h2>
-      {data.data.map((album) => {
-        return (
-          <Col key={album.id} className="mt-2 mb-2 p-4" lg={3} md={4} sm={6}>
-            <Card>
-              <Card.Title>{album.title}</Card.Title>
-              {/* <UserAlbum albumId={album.id} /> */}
-            </Card>
-          </Col>
-        );
-      })}
+      <div className="userAlbums ">
+        {data.data.map((album) => {
+          return (
+            <Col key={album.id} className="mt-2 mb-2 p-2" lg={3} md={4} sm={6}>
+              <Link className="anyLink" to={`/albums/${album.id}`}>
+                <Card className="albumsCard">
+                  <Card.Title className="albumsTitle d-block">
+                    {album.title}
+                  </Card.Title>
+                </Card>
+              </Link>
+            </Col>
+          );
+        })}
+      </div>
     </>
   );
 }

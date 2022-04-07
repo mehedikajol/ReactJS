@@ -7,6 +7,6 @@ const fetchAlbum = (albumId) => {
   );
 };
 
-export const useAlbum = (albumId) => {
+export const useUserAlbum = (albumId) => {
   return useQuery(["album", albumId], () => fetchAlbum(albumId));
 };
