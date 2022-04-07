@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { usePostData } from "../hooks/usePostData";
@@ -6,20 +7,21 @@ import "./../styles/ShowPost.css";
 import Comments from "./Comments";
 
 export default function Post() {
+  const [usersList, setUsersList] = useState([]);
   const { postId } = useParams();
   const { data, isError, error } = usePostData(postId);
-  const users = [
-    "Leanne Graham",
-    "Ervin Howell",
-    "Clementine Bauch",
-    "Patricia Lebsack",
-    "Chelsey Dietrich",
-    "Mrs. Dennis Schulist",
-    "Kurtis Weissnat",
-    "Nicholas Runolfsdottir V",
-    "Glenna Reichert",
-    "Clementina DuBuque",
-  ];
+  useEffect(() => {
+    const usersListData = () =>
+      axios.get(`https://jsonplaceholder.typicode.com/users`).then((res) => {
+        const usersDetails = res.data;
+        setUsersList(usersDetails);
+      });
+    usersListData();
+  }, []);
+
+  const users = usersList?.map((user) => {
+    return user.name;
+  });
 
   if (isError) {
     return <h2>{error}</h2>;
