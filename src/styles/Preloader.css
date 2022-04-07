@@ -18,8 +18,9 @@ body {
   font-size: 24px;
 }
 .loader {
-  width: 8em;
-  height: 8em;
+  width: 6em;
+  height: 6em;
+  margin: 20px;
   font-size: 22px;
   box-sizing: border-box;
   border-top: 0.3em solid #505050;
@@ -48,7 +49,7 @@ body {
   box-sizing: border-box;
   top: -0.2em;
 }
-.loader:::before {
+.loader::before {
   border-top: 0.3em solid dodgerblue;
   transform: rotate(120deg);
 }

@@ -22,9 +22,11 @@ export default function Post({ postId }) {
           backgroundImage: `url("https://picsum.photos/600/350")`,
         }}
       />
-      <Card.Title className="postTitle">{data?.data.title}</Card.Title>
-      <Card.Text className="postBody">{data?.data.body}</Card.Text>
-      <Button variant="primary">Read More</Button>
+      <div className="postDetails">
+        <Card.Title className="postTitle">{data?.data.title}</Card.Title>
+        <Card.Text className="postBody">{data?.data.body}</Card.Text>
+        <Button variant="primary">Read More</Button>
+      </div>
     </Card.Body>
   );
 }

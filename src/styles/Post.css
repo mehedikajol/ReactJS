@@ -7,12 +7,17 @@
   background-position: center top;
   background-size: cover;
 }
+.post .postDetails {
+  padding: 5px;
+}
 .post .postTitle {
   white-space: nowrap;
   font-size: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
+  border-bottom: 1px dotted #999999;
+  padding-bottom: 5px;
 }
 .post .postBody {
   font-size: 14px;
