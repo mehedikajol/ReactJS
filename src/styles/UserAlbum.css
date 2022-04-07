@@ -1,28 +1,11 @@
 .userAlbum {
 }
-.userAlbum .userAlbumBg {
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
+.userAlbum .photoItem {
   cursor: pointer;
-  padding: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.userAlbum .userAlbumBg:hover {
-  filter: brightness(1.2);
+.userAlbum .photoItem:hover {
+  filter: brightness(1.1);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.userAlbum .userAlbumBg .usersAlbumTitle {
-  color: white;
-  font-weight: 400;
-  font-size: 14px;
-  display: block;
-  text-align: center;
-}
-.userAlbum .userAlbumBg:hover .usersAlbumTitle {
-  display: none;
 }
