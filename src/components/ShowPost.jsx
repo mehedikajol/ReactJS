@@ -10,6 +10,7 @@ export default function Post() {
   const [usersList, setUsersList] = useState([]);
   const { postId } = useParams();
   const { data, isError, error } = usePostData(postId);
+
   useEffect(() => {
     const usersListData = () =>
       axios.get(`https://jsonplaceholder.typicode.com/users`).then((res) => {
@@ -26,6 +27,7 @@ export default function Post() {
   if (isError) {
     return <h2>{error}</h2>;
   }
+
   const userId = data?.data.userId;
 
   return (
