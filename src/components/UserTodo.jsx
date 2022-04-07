@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { useTodo } from "../hooks/useTodo";
-import "./../styles/Todo.css";
+import "./../styles/UserTodo.css";
 
 export default function Todo({ todoId }) {
   const { data } = useTodo(todoId);
