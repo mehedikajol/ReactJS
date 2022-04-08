@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { useUserPosts } from "../hooks/useUserPosts";
 import Preloader from "../utils/Preloder";
 import Post from "./Post";
@@ -24,9 +23,7 @@ export default function UserPosts({ userId }) {
           <Col key={post.id} className="mt-2 mb-2" lg={4} md={6} sm={6}>
             <Card>
               <div className="posts">
-                <Link className="anyLink" to={`/posts/${post.id}`}>
-                  <Post postId={post.id} />
-                </Link>
+                <Post postId={post.id} />
               </div>
             </Card>
           </Col>

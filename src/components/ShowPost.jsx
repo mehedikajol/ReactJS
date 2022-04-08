@@ -6,6 +6,7 @@ import { useUsersList } from "../hooks/useUsersList";
 import "./../styles/ShowPost.css";
 import Preloader from "./../utils/Preloder";
 import Comments from "./Comments";
+import SimilarPosts from "./SimilarPosts";
 
 export default function Post() {
   const { postId } = useParams();
@@ -40,6 +41,7 @@ export default function Post() {
         </Col>
       </Row>
       <Comments postId={postId} />
+      <SimilarPosts />
     </>
   );
 }

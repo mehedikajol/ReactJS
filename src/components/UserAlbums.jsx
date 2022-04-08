@@ -7,13 +7,14 @@ import "./../styles/UserAlbums.css";
 
 export default function UserAlbums({ userId }) {
   const { data, isLoading, isError, error } = useUserAlbums(userId);
+
   if (isLoading) {
     return <Preloader />;
   }
   if (isError) {
     return <h2>{error.meesage}</h2>;
   }
-  console.log(data.data);
+
   return (
     <>
       <h2>All Albums</h2>
