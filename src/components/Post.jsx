@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { usePostData } from "../hooks/usePostData";
 import Preloader from "../utils/Preloder";
 import "./../styles/Post.css";
@@ -25,7 +26,9 @@ export default function Post({ postId }) {
       <div className="postDetails">
         <Card.Title className="postTitle">{data?.data.title}</Card.Title>
         <Card.Text className="postBody">{data?.data.body}</Card.Text>
-        <Button variant="primary">Read More</Button>
+        <Link className="anyLink" to={`/posts/${postId}`}>
+          <Button variant="primary">Read More</Button>
+        </Link>
       </div>
     </Card.Body>
   );
