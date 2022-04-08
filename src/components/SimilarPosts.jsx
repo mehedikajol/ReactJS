@@ -4,20 +4,20 @@ import "./../styles/SimilarPosts.css";
 import Post from "./Post";
 
 export default function SimilarPosts() {
-  const RandomPosts = [
+  const randomPosts = [
     Math.floor(Math.random() * 100) + 1,
     Math.floor(Math.random() * 100) + 1,
     Math.floor(Math.random() * 100) + 1,
   ];
-
+  console.log(randomPosts);
   return (
     <div>
       <Container>
         <h2 className="mt-4 mb-2">You my also like: </h2>
         <Row>
-          {RandomPosts.map((randomPost) => {
+          {randomPosts.map((randomPost) => {
             return (
-              <Col className="mt-2 mb-2" lg={4} md={6} sm={6}>
+              <Col key={randomPost} className="mt-2 mb-2" lg={4} md={6} sm={6}>
                 <Card>
                   <div className="posts">
                     <Post postId={randomPost} />
